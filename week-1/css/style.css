@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==== HEADER ==== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 1rem;
+    background-color: rgb(213, 213, 213);
+    align-items: center;
+}
+
+.menu {
+    display: none;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #000000;
+    margin: 0 1rem;
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-btn span::after {
+    content: "";
+    display: block;
+    width: 1.6rem;
+    border-top: solid 2px black;
+    margin: 0.3rem 0;
+}
+
+/* ==== WELCOME MESSAGE ==== */
+.welcome-container {
+    padding: 6rem 2rem;
+    background-color: rgb(196, 216, 240);
+
+}
+
+.welcome-container h1{
+    margin: 0 auto;
+    width: fit-content;
+}
+
+/* ==== MAIN  ==== */
+main {
+    padding: 3rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h2 {
+    margin-bottom: 2rem; 
+}
+
+.col {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 1rem;
+    width: 90%;
+    max-width: 1100px;
+}
+
+.box {
+    background: rgb(128, 128, 161);
+    height: 10rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    flex:1 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    padding: 0.9rem 0.7rem;
+    border: none;
+    margin-top: 1.5rem;
+    background-color: rgb(178, 219, 236);
+}
+
+/* ==== MEDIA QUERY ==== */
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .box {
+        flex-basis: 45%;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+    .menu {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .box {
+        flex-basis: 45%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .menu {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .box {
+        flex-basis: 45%;
+    }
+}
