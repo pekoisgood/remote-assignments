@@ -46,7 +46,7 @@ console.log(calculate({ n1: 2, n2: 6, op:'x'}))
 // assignment 3 : function, Array, and Object
 
 function calculateDiscount(data) {
-    const discount = data.discount;
+    const discount = 1 - data.discount;
     let sum = 0;
     for (let i =0; i < data.products.length; i ++){
         sum += data.products[i].price*discount
