@@ -126,7 +126,7 @@ main h2 {
     background: rgb(128, 128, 161);
     height: 10rem;
     margin: 0.5rem;
-    flex: 50%;
+    flex: 100%;
     display: flex;
     justify-content: center;
 }
