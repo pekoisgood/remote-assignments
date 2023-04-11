@@ -11,7 +11,7 @@ app.get('/getData', (req, res) => {
     const { number } = req.query;
     if (!number){
         return res.send('<h1>Lack of Parameter</h1>')
-    } else if ( +number >= 0 ) {
+    } else if ( +number >= 0 && Number.isInteger(+number) ) {
         let initNumber = 0;
         for (let i =0; i < +number+1; i++){
             initNumber += i;
