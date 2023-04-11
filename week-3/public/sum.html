@@ -7,9 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <form action='/getData' method="get">
+    <div class="wrapper">
+        <form>
         <label for="number">Please input a number : </label>
         <input type="text" name="number" id="number"></input>
-        <button type="submit" >Submit</button>
+        <button>Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        const btn = document.querySelector('button');
+        const wrapper = document.querySelector('.wrapper');
+        
+        btn.addEventListener('click', getSum);
+        async function getSum(e){
+            e.preventDefault();
+            const number = document.querySelector('#number').value;
+            const res = await fetch(`/getData?number=${number}`)
+                .then((res) => res.json());
+            wrapper.innerHTML = `<h1>${res.message}</h1>`;
+        }
+    </script>
 </body>
 </html>

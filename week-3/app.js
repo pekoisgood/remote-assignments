@@ -1,25 +1,12 @@
 const express = require('express');
 const app = express();
+const cookieParser = require('cookie-parser');
 
 app.use(express.static('public'));
+app.use(cookieParser());
 
-app.get('/', (req, res) => {
-    res.send('<h1>Hello world!</h1>')
-})
-
-app.get('/getData', (req, res) => {
-    const { number } = req.query;
-    if (!number){
-        return res.send('<h1>Lack of Parameter</h1>')
-    } else if ( +number >= 0 && Number.isInteger(+number) ) {
-        let initNumber = 0;
-        for (let i =0; i < +number+1; i++){
-            initNumber += i;
-        }
-        return res.send(`<h1>${initNumber}</h1>`)
-    }
-    return res.send('<h1>Wrong Parameter</h1>')
-})
+const router = require('./routes');
+app.use(router);
 
 const port = process.env.PORT || 3000;
 app.listen( port, () => console.log('The server is listening on localhost:3000...'));
