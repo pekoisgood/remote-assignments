@@ -24,7 +24,8 @@
             e.preventDefault();
             const number = document.querySelector('#number').value;
             const res = await fetch(`/getData?number=${number}`)
-                .then((res) => res.json());
+                .then((res) => res.json())
+                .catch((err) => console.log(err));
             wrapper.innerHTML = `<h1>${res.message}</h1>`;
         }
     </script>
