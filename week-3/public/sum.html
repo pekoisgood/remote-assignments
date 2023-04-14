@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <form>
+      <form>
         <label for="number">Please input a number : </label>
-        <input type="text" name="number" id="number"></input>
-        <button>Submit</button>
-        </form>
+        <input type="text" name="number" id="number" />
+        <button type="submit">Submit</button>
+      </form>
     </div>
-    
+    <div class="number-output"></div>
+
     <script>
-        const btn = document.querySelector('button');
-        const wrapper = document.querySelector('.wrapper');
-        
-        btn.addEventListener('click', getSum);
-        async function getSum(e){
-            e.preventDefault();
-            const number = document.querySelector('#number').value;
-            const res = await fetch(`/getData?number=${number}`)
-                .then((res) => res.json())
-                .catch((err) => console.log(err));
-            wrapper.innerHTML = `<h1>${res.message}</h1>`;
+      const btn = document.querySelector("button");
+      const numberOutput = document.querySelector(".number-output");
+
+      btn.addEventListener("click", getSum);
+      async function getSum(e) {
+        e.preventDefault();
+        const number = document.querySelector("#number").value;
+        try {
+          const res = await fetch(`/getData?number=${number}`);
+          const data = await res.json();
+          numberOutput.innerHTML = `<h1>${data.message}</h1>`;
+        } catch (error) {
+          console.log(error);
         }
+      }
     </script>
-</body>
+  </body>
 </html>
