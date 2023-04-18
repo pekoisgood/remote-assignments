@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/pekoisgood.github.io/remote-assignments/week-4/assignment-3/build/static/css/main.effc4bbc.css",
-    "main.js": "/pekoisgood.github.io/remote-assignments/week-4/assignment-3/build/static/js/main.7fcd86c5.js",
-    "index.html": "/pekoisgood.github.io/remote-assignments/week-4/assignment-3/build/index.html",
-    "main.effc4bbc.css.map": "/pekoisgood.github.io/remote-assignments/week-4/assignment-3/build/static/css/main.effc4bbc.css.map",
-    "main.7fcd86c5.js.map": "/pekoisgood.github.io/remote-assignments/week-4/assignment-3/build/static/js/main.7fcd86c5.js.map"
+    "main.css": "/pekoisgood.github.io/remote-assignments/week-4/assignment-3/react-page/build/static/css/main.effc4bbc.css",
+    "main.js": "/pekoisgood.github.io/remote-assignments/week-4/assignment-3/react-page/build/static/js/main.7fcd86c5.js",
+    "index.html": "/pekoisgood.github.io/remote-assignments/week-4/assignment-3/react-page/build/index.html",
+    "main.effc4bbc.css.map": "/pekoisgood.github.io/remote-assignments/week-4/assignment-3/react-page/build/static/css/main.effc4bbc.css.map",
+    "main.7fcd86c5.js.map": "/pekoisgood.github.io/remote-assignments/week-4/assignment-3/react-page/build/static/js/main.7fcd86c5.js.map"
   },
   "entrypoints": [
     "static/css/main.effc4bbc.css",
