@@ -2,7 +2,7 @@
   "name": "react-page",
   "version": "0.1.0",
   "homepage": "https:/pekoisgood.github.io/remote-assignments/week-4/assignment-3/react-page",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
