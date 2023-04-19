@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./components/Header";
 import Welcome from "./components/Welcome";
 import Main from "./components/Main";
