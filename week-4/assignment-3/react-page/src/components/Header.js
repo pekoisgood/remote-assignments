@@ -3,38 +3,43 @@ import { useState } from "react";
 export default function Header() {
   const [showSideMenu, setShowSideMenu] = useState(false);
 
+  const items = [
+    {
+      title: "Item 1",
+      href: "#item1",
+    },
+    {
+      title: "Item 2",
+      href: "#item2",
+    },
+    {
+      title: "Item 3",
+      href: "#item3",
+    },
+    {
+      title: "Item 4",
+      href: "#item4",
+    },
+  ];
+
   return (
     <header className="wrap">
       <h5>Website Title / Logo</h5>
       <ul className="menu">
-        <li>
-          <a href="#item1">Item 1</a>
-        </li>
-        <li>
-          <a href="#item2">Item 2</a>
-        </li>
-        <li>
-          <a href="#item3">Item 3</a>
-        </li>
-        <li>
-          <a href="#item4">Item 4</a>
-        </li>
+        {items.map((item) => (
+          <li>
+            <a href={item.href}>{item.title}</a>
+          </li>
+        ))}
       </ul>
       {showSideMenu ? (
         <div className="menu-sidebar">
           <ul>
-            <li>
-              <a href="#item1">Item 1</a>
-            </li>
-            <li>
-              <a href="#item2">Item 2</a>
-            </li>
-            <li>
-              <a href="#item3">Item 3</a>
-            </li>
-            <li>
-              <a href="#item4">Item 4</a>
-            </li>
+            {items.map((item) => (
+              <li>
+                <a href={item.href}>{item.title}</a>
+              </li>
+            ))}
           </ul>
           <button
             id="close-btn"
