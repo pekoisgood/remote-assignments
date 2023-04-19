@@ -1,7 +1,8 @@
 const wrapper = document.querySelector(".wrapper");
-const url = "https://api.github.com/orgs/facebook/repos?per_page=5&page=1";
+let number = 1;
 
 async function getItems() {
+  let url = `https://api.github.com/orgs/facebook/repos?per_page=5&page=${number}`;
   const res = await fetch(url)
     .then((data) => data.json())
     .catch((err) => console.log(err));
@@ -25,6 +26,7 @@ async function getItems() {
     .join("");
 
   wrapper.innerHTML += items;
+  number += 1;
 }
 
 getItems();
