@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pekoisgood.github.io/remote-assignments/week-4/assignment-5/counter/build/static/css/main.0556df80.css",
+    "main.js": "/pekoisgood.github.io/remote-assignments/week-4/assignment-5/counter/build/static/js/main.bff45d79.js",
+    "index.html": "/pekoisgood.github.io/remote-assignments/week-4/assignment-5/counter/build/index.html",
+    "main.0556df80.css.map": "/pekoisgood.github.io/remote-assignments/week-4/assignment-5/counter/build/static/css/main.0556df80.css.map",
+    "main.bff45d79.js.map": "/pekoisgood.github.io/remote-assignments/week-4/assignment-5/counter/build/static/js/main.bff45d79.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0556df80.css",
+    "static/js/main.bff45d79.js"
+  ]
+}
