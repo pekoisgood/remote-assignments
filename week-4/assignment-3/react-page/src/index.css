@@ -146,7 +146,7 @@ main h2 {
 /* ==== MEDIA QUERY ==== */
 @media screen and (min-width: 500px) and (max-width: 800px) {
   .box {
-    flex-basis: 50%;
+    flex-basis: 45%;
   }
 }
 
